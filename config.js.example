@@ -1,0 +1,27 @@
+module.exports = {
+    baseUrl: 'http://localhost.test',
+    browserOptions: {
+        headless: false,
+        slowMo: 50,
+        viewport: { width: 1280, height: 800 },
+        timeout: 30000
+    },
+    login: {
+        email: 'example@email.com',
+        password: 'superdupersecret'
+    },
+    retries: 1, // retry failed tests
+    formSaveStrategies: {
+        'client': ['button[data-form="client"]:has-text("Save")', 'button:has-text("Save Client")'],
+        'invoice': ['button[data-form="invoice"]:has-text("Save")', 'button:has-text("Save Invoice")'],
+        'quote': ['button[data-form="quote"]:has-text("Save")', 'button:has-text("Save Quote")'],
+        'payment': ['button[data-form="payment"]:has-text("Save")', 'button:has-text("Save Payment")'],
+        'product': ['button[data-form="product"]:has-text("Save")', 'button:has-text("Save Product")'],
+        'default': [
+            'button[type="submit"]:has-text("Save")',
+            'input[type="submit"][value*="Save"]',
+            'button[type="submit"]',
+            'input[type="submit"]'
+        ]
+    }
+};
