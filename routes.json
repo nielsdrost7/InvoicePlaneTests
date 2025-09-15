@@ -1,0 +1,233 @@
+[
+  {
+    "module": "clients",
+    "routes": {
+      "index": [
+        "/clients",
+        "/clients/index",
+        "/clients/status/active",
+        "/clients/status/all",
+        "/clients/status/inactive",
+        "/user_clients/index"
+      ],
+      "view": [
+        "/clients/view/{id}",
+        "/clients/view/{id}/invoices",
+        "/guest/view/{id}",
+        "/guest/invoice/{id}",
+        "/guest/quote/{id}"
+      ],
+      "form": [
+        "/clients/form",
+        "/clients/form/{id}",
+        "/user_clients/form",
+        "/user_clients/form/{id}"
+      ],
+      "destroy": [
+        "/clients/delete/{id}",
+        "/clients/remove/{id}",
+        "/user_clients/delete/{id}"
+      ],
+      "exotic": [],
+      "ajax": []
+    }
+  },
+  {
+    "module": "core",
+    "routes": {
+      "index": [
+        "/custom_fields",
+        "/custom_fields/index",
+        "/custom_values",
+        "/email_templates/index",
+        "/import",
+        "/reports/invoice_aging",
+        "/reports/invoices_per_client",
+        "/reports/payment_history",
+        "/reports/sales_by_client",
+        "/reports/sales_by_year",
+        "/users",
+        "/users/index",
+        "/sessions/index"
+      ],
+      "view": [],
+      "form": [
+        "/custom_fields/form",
+        "/custom_fields/form/{id}",
+        "/custom_values/create",
+        "/custom_values/create/{id}",
+        "/email_templates/form",
+        "/email_templates/form/{id}",
+        "/import/form",
+        "/users/form",
+        "/users/form/{id}",
+        "/users/change_password/{id}"
+      ],
+      "destroy": [
+        "/custom_fields/delete/{id}",
+        "/custom_values/delete/{id}",
+        "/email_templates/delete/{id}",
+        "/users/delete/{id}"
+      ],
+      "exotic": [
+        "/dashboard",
+        "/settings",
+        "/sessions/login",
+        "/sessions/logout",
+        "/upload/form",
+        "/upload/delete/{id}"
+      ],
+      "ajax": [
+        "/custom_fields/table/all",
+        "/custom_fields/table/client",
+        "/custom_fields/table/invoice",
+        "/custom_fields/table/payment",
+        "/custom_fields/table/quote",
+        "/custom_fields/table/user",
+        "/custom_values/field",
+        "/custom_values/field/{id}",
+        "/mailer/invoice/{id}",
+        "/mailer/quote/{id}",
+        "/layout/header",
+        "/layout/footer",
+        "/layout/sidebar",
+        "/upload/save"
+      ]
+    }
+  },
+  {
+    "module": "products",
+    "routes": {
+      "index": [
+        "/families/index",
+        "/units/index",
+        "/products/index"
+      ],
+      "view": [],
+      "form": [
+        "/families/form",
+        "/families/form/{id}",
+        "/units/form",
+        "/units/form/{id}",
+        "/products/form",
+        "/products/form/{id}"
+      ],
+      "destroy": [
+        "/families/delete/{id}",
+        "/units/delete/{id}",
+        "/products/delete/{id}"
+      ],
+      "exotic": [],
+      "ajax": []
+    }
+  },
+  {
+    "module": "projects",
+    "routes": {
+      "index": [
+        "/tasks/index",
+        "/projects/index"
+      ],
+      "view": [
+        "/projects/view/{id}"
+      ],
+      "form": [
+        "/tasks/form",
+        "/tasks/form/{id}",
+        "/projects/form",
+        "/projects/form/{id}"
+      ],
+      "destroy": [
+        "/tasks/delete/{id}",
+        "/projects/delete/{id}"
+      ],
+      "exotic": [],
+      "ajax": []
+    }
+  },
+  {
+    "module": "quotes",
+    "routes": {
+      "index": [
+        "/quotes/index",
+        "/quotes/status/all",
+        "/quotes/status/approved",
+        "/quotes/status/canceled",
+        "/quotes/status/draft",
+        "/quotes/status/rejected",
+        "/quotes/status/sent",
+        "/quotes/status/viewed"
+      ],
+      "view": [
+        "/quotes/view/{id}"
+      ],
+      "form": [],
+      "destroy": [
+        "/quotes/delete/{id}",
+        "/quotes/cancel/{id}"
+      ],
+      "exotic": [],
+      "ajax": [
+        "/quotes/generate_pdf/{id}"
+      ]
+    }
+  },
+  {
+    "module": "payments",
+    "routes": {
+      "index": [
+        "/payments/index",
+        "/payment_methods/index"
+      ],
+      "view": [],
+      "form": [
+        "/payments/form",
+        "/payments/form/{id}",
+        "/payment_methods/form",
+        "/payment_methods/form/{id}"
+      ],
+      "destroy": [
+        "/payments/delete/{id}",
+        "/payment_methods/delete/{id}"
+      ],
+      "exotic": [],
+      "ajax": [
+        "/payments/online_logs"
+      ]
+    }
+  },
+  {
+    "module": "invoices",
+    "routes": {
+      "index": [
+        "/invoices/index",
+        "/invoices/archive",
+        "/invoices/status/all",
+        "/invoices/status/draft",
+        "/invoices/status/overdue",
+        "/invoices/status/paid",
+        "/invoices/status/sent",
+        "/invoices/status/viewed",
+        "/invoices/recurring",
+        "/invoices/recurring/index",
+        "/invoice_groups/index"
+      ],
+      "view": [
+        "/invoices/view/{id}"
+      ],
+      "form": [
+        "/invoice_groups/form",
+        "/invoice_groups/form/{id}"
+      ],
+      "destroy": [
+        "/invoices/delete/{id}",
+        "/invoices/recurring/stop/{id}",
+        "/invoice_groups/delete/{id}"
+      ],
+      "exotic": [],
+      "ajax": [
+        "/invoices/generate_pdf/{id}"
+      ]
+    }
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "name": "invoiceplane-tests",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest --runInBand",
+    "test:headed": "jest --runInBand --config=jest.config.headed.js",
+    "test:update": "jest --runInBand --updateSnapshot"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-playwright-preset": "^4.0.0",
+    "playwright": "^1.42.1"
+  }
+}
